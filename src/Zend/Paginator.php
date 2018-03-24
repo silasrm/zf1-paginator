@@ -129,7 +129,7 @@ class Zend_Paginator implements Countable, IteratorAggregate
     /**
      * Result filter
      *
-     * @var Zend_Filter_Interface
+     * @var Zend_Filter_Interface|null
      */
     protected $_filter = null;
 
@@ -639,7 +639,7 @@ class Zend_Paginator implements Countable, IteratorAggregate
     /**
      * Get the filter
      *
-     * @return Zend_Filter_Interface
+     * @return Zend_Filter_Interface|null
      */
     public function getFilter()
     {
@@ -888,6 +888,7 @@ class Zend_Paginator implements Countable, IteratorAggregate
     {
         if ($this->_view === null) {
 
+            /** @var Zend_Controller_Action_Helper_ViewRenderer $viewRenderer */
             $viewRenderer = Zend_Controller_Action_HelperBroker::getStaticHelper('viewRenderer');
             if ($viewRenderer->view === null) {
                 $viewRenderer->initView();

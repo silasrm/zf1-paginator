@@ -28,6 +28,13 @@
 class Zend_Paginator_Adapter_DbTableSelect extends Zend_Paginator_Adapter_DbSelect
 {
     /**
+     * Database query
+     *
+     * @var Zend_Db_Table_Select
+     */
+    protected $_select = null;
+
+    /**
      * Returns a Zend_Db_Table_Rowset_Abstract of items for a page.
      *
      * @param  integer $offset Page offset

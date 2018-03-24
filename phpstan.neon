@@ -1,2 +1,7 @@
 parameters:
     ignoreErrors:
+        - '#Casting to .+ something that.s already .+\.#'
+        - '#Variable \$currentOffset might not be defined\.#'
+        - '#Call to an undefined method Zend_Paginator_Adapter_Interface::getCacheIdentifier\(\)\.#'
+        - '#Call to an undefined method Zend_View_Interface::paginationControl\(\)\.#'
+        - '#Strict comparison using !== between Traversable and null will always evaluate to true\.#'
