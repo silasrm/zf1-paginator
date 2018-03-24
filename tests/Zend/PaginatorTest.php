@@ -35,11 +35,6 @@ require_once 'Zend/Paginator/AdapterAggregate.php';
  */
 
 /**
- * @see Zend_Config_Xml
- */
-require_once 'Zend/Config/Xml.php';
-
-/**
  * @see Zend_Db_Adapter_Pdo_Sqlite
  */
 require_once 'Zend/Db/Adapter/Pdo/Sqlite.php';
