@@ -6,6 +6,9 @@
     backupGlobals="true"
     stderr="true"
     colors="true">
+    <php>
+        <includePath>./tests</includePath>
+    </php>
     <filter>
         <whitelist addUncoveredFilesFromWhitelist="true">
             <directory suffix=".php">./src</directory>

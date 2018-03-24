@@ -277,6 +277,7 @@ class Zend_Paginator_Adapter_DbSelectTest extends PHPUnit\Framework\TestCase
 
     /**
      * @group ZF-5233
+     * @doesNotPerformAssertions
      */
     public function testSelectHasAliasedColumns()
     {

@@ -97,6 +97,7 @@ class Zend_Paginator_Adapter_IteratorTest extends PHPUnit\Framework\TestCase
 
     /**
      * @group ZF-4151
+     * @doesNotPerformAssertions
      */
     public function testDoesNotThrowOutOfBoundsExceptionIfIteratorIsEmpty()
     {

@@ -20,6 +20,15 @@
  * @version    $Id$
  */
 
+/**
+ * @see Zf4207
+ */
+require_once 'Zend/Paginator/_files/Zf4207.php';
+
+/**
+ * @see TestTable
+ */
+require_once 'Zend/Paginator/_files/TestTable.php';
 
 /**
  * @category   Zend
