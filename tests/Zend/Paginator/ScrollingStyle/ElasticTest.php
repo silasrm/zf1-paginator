@@ -20,19 +20,6 @@
  * @version    $Id$
  */
 
-/**
- * @see Zend_Paginator_ScrollingStyle_Elastic
- */
-require_once 'Zend/Paginator/ScrollingStyle/Elastic.php';
-
-/**
- * @see PHPUnit\Framework\TestCase
- */
-
-/**
- * @see Zend_Paginator
- */
-require_once 'Zend/Paginator.php';
 
 /**
  * @category   Zend

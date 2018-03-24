@@ -20,19 +20,6 @@
  * @version    $Id$
  */
 
-/**
- * @see Zend_Paginator
- */
-require_once 'Zend/Paginator.php';
-
-/**
- * @see Zend_Paginator_Adapter_Null
- */
-require_once 'Zend/Paginator/Adapter/Null.php';
-
-/**
- * @see PHPUnit\Framework\TestCase
- */
 
 /**
  * @category   Zend
@@ -109,7 +96,7 @@ class Zend_Paginator_Adapter_NullTest extends PHPUnit\Framework\TestCase
         $actual = $this->_adapter->getItems(0, 10);
         $this->assertEquals(array(), $actual);
     }
-    
+
     /**
      * Verify that the fix for ZF-4151 doesn't create an OBO error
      */

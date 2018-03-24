@@ -20,21 +20,6 @@
  * @version    $Id$
  */
 
-/**
- * @see Zend_Paginator_Adapter_DbSelect
- */
-require_once 'Zend/Paginator/Adapter/DbSelect.php';
-
-/**
- * @see Zend_Db_Adapter_Oracle
- */
-require_once 'Zend/Db/Adapter/Oracle.php';
-
-/**
- * @see Zend_Paginator_Adapter_DbSelectTest
- */
-require_once 'Zend/Paginator/Adapter/DbSelectTest.php';
-
 require_once dirname(__FILE__) . '/../../_files/TestTable.php';
 
 /**

@@ -20,19 +20,6 @@
  * @version    $Id$
  */
 
-/**
- * @see Zend_Paginator
- */
-require_once 'Zend/Paginator.php';
-
-/**
- * @see Zend_Paginator_ScrollingStyle_Jumping
- */
-require_once 'Zend/Paginator/ScrollingStyle/Jumping.php';
-
-/**
- * @see PHPUnit\Framework\TestCase
- */
 
 /**
  * @category   Zend

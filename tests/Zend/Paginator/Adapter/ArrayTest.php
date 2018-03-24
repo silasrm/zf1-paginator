@@ -20,14 +20,6 @@
  * @version    $Id$
  */
 
-/**
- * @see Zend_Paginator_Adapter_Array
- */
-require_once 'Zend/Paginator/Adapter/Array.php';
-
-/**
- * @see PHPUnit\Framework\TestCase
- */
 
 /**
  * @category   Zend
@@ -79,7 +71,7 @@ class Zend_Paginator_Adapter_ArrayTest extends PHPUnit\Framework\TestCase
     {
         $this->assertEquals(101, $this->_adapter->count());
     }
-    
+
 
     /**
      * @group ZF-4151

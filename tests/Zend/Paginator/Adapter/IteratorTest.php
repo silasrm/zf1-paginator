@@ -20,14 +20,6 @@
  * @version    $Id$
  */
 
-/**
- * @see Zend_Paginator_Adapter_Iterator
- */
-require_once 'Zend/Paginator/Adapter/Iterator.php';
-
-/**
- * @see PHPUnit\Framework\TestCase
- */
 
 /**
  * @category   Zend

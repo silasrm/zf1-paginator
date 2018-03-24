@@ -20,22 +20,6 @@
  * @version    $Id$
  */
 
-/**
- * @see Zend_Paginator_Adapter_DbSelect
- */
-require_once 'Zend/Paginator/Adapter/DbSelect.php';
-
-/**
- * @see Zend_Db_Adapter_Pdo_Sqlite
- */
-require_once 'Zend/Db/Adapter/Pdo/Sqlite.php';
-require_once 'Zend/Debug.php';
-require_once 'Zend/Db/Adapter/Abstract.php';
-
-/**
- * @see PHPUnit\Framework\TestCase
- */
-
 require_once dirname(__FILE__) . '/../_files/TestTable.php';
 
 /**
@@ -114,7 +98,7 @@ class Zend_Paginator_Adapter_DbSelectTest extends PHPUnit\Framework\TestCase
         $this->assertSame(md5($select->assemble()), $paginatorAdapter->getCacheIdentifier(),
                           'Cache identifier incorrect!');
     }
-    
+
     public function testGetsItemsAtOffsetZero()
     {
         $actual = $this->_adapter->getItems(0, 10);

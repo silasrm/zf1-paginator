@@ -20,11 +20,6 @@
  * @version    $Id$
  */
 
-/**
- * @see Zend_Paginator_Adapter_DbSelect_OracleTest
- */
-require_once 'Zend/Paginator/Adapter/DbSelect/OracleTest.php';
-
 
 /**
  * @category   Zend
