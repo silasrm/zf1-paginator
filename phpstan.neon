@@ -1,4 +1,7 @@
 parameters:
+    excludes_analyse:
+        - %rootDir%/../../../vendor/*
+        - %rootDir%/../../../tests/*
     ignoreErrors:
         - '#Casting to .+ something that.s already .+\.#'
         - '#Variable \$currentOffset might not be defined\.#'

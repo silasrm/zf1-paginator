@@ -39,16 +39,16 @@ class Zend_Paginator_Adapter_IteratorTest extends PHPUnit\Framework\TestCase
     /**
      * Prepares the environment before running a test.
      */
-    protected function setUp ()
+    protected function setUp()
     {
         parent::setUp();
-        $iterator = new ArrayIterator(range(1, 101));
+        $iterator       = new ArrayIterator(range(1, 101));
         $this->_adapter = new Zend_Paginator_Adapter_Iterator($iterator);
     }
     /**
      * Cleans up the environment after running a test.
      */
-    protected function tearDown ()
+    protected function tearDown()
     {
         $this->_adapter = null;
         parent::tearDown();
@@ -102,7 +102,7 @@ class Zend_Paginator_Adapter_IteratorTest extends PHPUnit\Framework\TestCase
     public function testDoesNotThrowOutOfBoundsExceptionIfIteratorIsEmpty()
     {
         $this->_paginator = Zend_Paginator::factory(new ArrayIterator(array()));
-        $items = $this->_paginator->getCurrentItems();
+        $items            = $this->_paginator->getCurrentItems();
         try {
             foreach ($items as $item);
         } catch (OutOfBoundsException $e) {
@@ -113,20 +113,22 @@ class Zend_Paginator_Adapter_IteratorTest extends PHPUnit\Framework\TestCase
     /**
      * @group ZF-8084
      */
-    public function testGetItemsSerializable() {
-        $items = $this->_adapter->getItems(0, 1);
+    public function testGetItemsSerializable()
+    {
+        $items         = $this->_adapter->getItems(0, 1);
         $innerIterator = $items->getInnerIterator();
-        $items = unserialize(serialize($items));
-        $this->assertTrue( ($items->getInnerIterator() == $innerIterator), 'getItems has to be serializable to use caching');
+        $items         = unserialize(serialize($items));
+        $this->assertTrue(($items->getInnerIterator() == $innerIterator), 'getItems has to be serializable to use caching');
     }
 
     /**
      * @group ZF-4151
      */
-    public function testEmptySet() {
-        $iterator = new ArrayIterator(array());
+    public function testEmptySet()
+    {
+        $iterator       = new ArrayIterator(array());
         $this->_adapter = new Zend_Paginator_Adapter_Iterator($iterator);
-        $actual = $this->_adapter->getItems(0, 10);
+        $actual         = $this->_adapter->getItems(0, 10);
         $this->assertEquals(array(), $actual);
     }
 }

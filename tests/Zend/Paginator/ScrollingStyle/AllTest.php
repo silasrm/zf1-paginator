@@ -35,7 +35,7 @@ class Zend_Paginator_ScrollingStyle_AllTest extends PHPUnit\Framework\TestCase
      * @var Zend_Paginator_ScrollingStyle_All
      */
     private $_scrollingStyle = null;
-    private $_paginator = null;
+    private $_paginator      = null;
 
     /**
      * Prepares the environment before running a test.
@@ -44,16 +44,16 @@ class Zend_Paginator_ScrollingStyle_AllTest extends PHPUnit\Framework\TestCase
     {
         parent::setUp();
         $this->_scrollingStyle = new Zend_Paginator_ScrollingStyle_All();
-        $this->_paginator = Zend_Paginator::factory(range(1, 101));
+        $this->_paginator      = Zend_Paginator::factory(range(1, 101));
         $this->_paginator->setItemCountPerPage(10);
     }
     /**
      * Cleans up the environment after running a test.
      */
-    protected function tearDown ()
+    protected function tearDown()
     {
         $this->_scrollingStyle = null;
-        $this->_paginator = null;
+        $this->_paginator      = null;
         parent::tearDown();
     }
 
@@ -63,7 +63,7 @@ class Zend_Paginator_ScrollingStyle_AllTest extends PHPUnit\Framework\TestCase
     public function testGetsPages()
     {
         $expected = array_combine(range(1, 11), range(1, 11));
-        $pages = $this->_scrollingStyle->getPages($this->_paginator);
+        $pages    = $this->_scrollingStyle->getPages($this->_paginator);
         $this->assertEquals($expected, $pages);
     }
 

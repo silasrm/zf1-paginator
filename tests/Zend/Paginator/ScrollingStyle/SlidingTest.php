@@ -47,7 +47,7 @@ class Zend_Paginator_ScrollingStyle_SlidingTest extends PHPUnit\Framework\TestCa
     {
         parent::setUp();
         $this->_scrollingStyle = new Zend_Paginator_ScrollingStyle_Sliding();
-        $this->_paginator = Zend_Paginator::factory(range(1, 101));
+        $this->_paginator      = Zend_Paginator::factory(range(1, 101));
         $this->_paginator->setItemCountPerPage(10);
         $this->_paginator->setPageRange(5);
     }
@@ -57,14 +57,14 @@ class Zend_Paginator_ScrollingStyle_SlidingTest extends PHPUnit\Framework\TestCa
     protected function tearDown()
     {
         $this->_scrollingStyle = null;
-        $this->_paginator = null;
+        $this->_paginator      = null;
         parent::tearDown();
     }
 
     public function testGetsPagesInRangeForFirstPage()
     {
         $this->_paginator->setCurrentPageNumber(1);
-        $actual = $this->_scrollingStyle->getPages($this->_paginator);
+        $actual   = $this->_scrollingStyle->getPages($this->_paginator);
         $expected = array_combine(range(1, 5), range(1, 5));
         $this->assertEquals($expected, $actual);
     }
@@ -72,7 +72,7 @@ class Zend_Paginator_ScrollingStyle_SlidingTest extends PHPUnit\Framework\TestCa
     public function testGetsPagesInRangeForSecondPage()
     {
         $this->_paginator->setCurrentPageNumber(2);
-        $actual = $this->_scrollingStyle->getPages($this->_paginator);
+        $actual   = $this->_scrollingStyle->getPages($this->_paginator);
         $expected = array_combine(range(1, 5), range(1, 5));
         $this->assertEquals($expected, $actual);
     }
@@ -80,7 +80,7 @@ class Zend_Paginator_ScrollingStyle_SlidingTest extends PHPUnit\Framework\TestCa
     public function testGetsPagesInRangeForFifthPage()
     {
         $this->_paginator->setCurrentPageNumber(5);
-        $actual = $this->_scrollingStyle->getPages($this->_paginator);
+        $actual   = $this->_scrollingStyle->getPages($this->_paginator);
         $expected = array_combine(range(3, 7), range(3, 7));
         $this->assertEquals($expected, $actual);
     }
@@ -88,7 +88,7 @@ class Zend_Paginator_ScrollingStyle_SlidingTest extends PHPUnit\Framework\TestCa
     public function testGetsPagesInRangeForLastPage()
     {
         $this->_paginator->setCurrentPageNumber(11);
-        $actual = $this->_scrollingStyle->getPages($this->_paginator);
+        $actual   = $this->_scrollingStyle->getPages($this->_paginator);
         $expected = array_combine(range(7, 11), range(7, 11));
         $this->assertEquals($expected, $actual);
     }

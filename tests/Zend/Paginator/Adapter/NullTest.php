@@ -39,7 +39,7 @@ class Zend_Paginator_Adapter_NullTest extends PHPUnit\Framework\TestCase
     /**
      * Prepares the environment before running a test.
      */
-    protected function setUp ()
+    protected function setUp()
     {
         parent::setUp();
         $this->_adapter = new Zend_Paginator_Adapter_Null(101);
@@ -91,18 +91,20 @@ class Zend_Paginator_Adapter_NullTest extends PHPUnit\Framework\TestCase
     /**
      * @group ZF-4151
      */
-    public function testEmptySet() {
+    public function testEmptySet()
+    {
         $this->_adapter = new Zend_Paginator_Adapter_Null(0);
-        $actual = $this->_adapter->getItems(0, 10);
+        $actual         = $this->_adapter->getItems(0, 10);
         $this->assertEquals(array(), $actual);
     }
 
     /**
      * Verify that the fix for ZF-4151 doesn't create an OBO error
      */
-    public function testSetOfOne() {
+    public function testSetOfOne()
+    {
         $this->_adapter = new Zend_Paginator_Adapter_Null(1);
-        $actual = $this->_adapter->getItems(0, 10);
+        $actual         = $this->_adapter->getItems(0, 10);
         $this->assertEquals(array_fill(0, 1, null), $actual);
     }
 }

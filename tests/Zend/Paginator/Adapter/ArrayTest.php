@@ -39,7 +39,7 @@ class Zend_Paginator_Adapter_ArrayTest extends PHPUnit\Framework\TestCase
     /**
      * Prepares the environment before running a test.
      */
-    protected function setUp ()
+    protected function setUp()
     {
         parent::setUp();
         $this->_adapter = new Zend_Paginator_Adapter_Array(range(1, 101));
@@ -47,7 +47,7 @@ class Zend_Paginator_Adapter_ArrayTest extends PHPUnit\Framework\TestCase
     /**
      * Cleans up the environment after running a test.
      */
-    protected function tearDown ()
+    protected function tearDown()
     {
         $this->_adapter = null;
         parent::tearDown();
@@ -56,14 +56,14 @@ class Zend_Paginator_Adapter_ArrayTest extends PHPUnit\Framework\TestCase
     public function testGetsItemsAtOffsetZero()
     {
         $expected = range(1, 10);
-        $actual = $this->_adapter->getItems(0, 10);
+        $actual   = $this->_adapter->getItems(0, 10);
         $this->assertEquals($expected, $actual);
     }
 
     public function testGetsItemsAtOffsetTen()
     {
         $expected = range(11, 20);
-        $actual = $this->_adapter->getItems(10, 10);
+        $actual   = $this->_adapter->getItems(10, 10);
         $this->assertEquals($expected, $actual);
     }
 
@@ -76,9 +76,10 @@ class Zend_Paginator_Adapter_ArrayTest extends PHPUnit\Framework\TestCase
     /**
      * @group ZF-4151
      */
-    public function testEmptySet() {
+    public function testEmptySet()
+    {
         $this->_adapter = new Zend_Paginator_Adapter_Array(array());
-        $actual = $this->_adapter->getItems(0, 10);
+        $actual         = $this->_adapter->getItems(0, 10);
         $this->assertEquals(array(), $actual);
     }
 }

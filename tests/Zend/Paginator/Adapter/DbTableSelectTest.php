@@ -45,7 +45,7 @@ class Zend_Paginator_Adapter_DbTableSelectTest extends Zend_Paginator_Adapter_Db
 
     public function testToJsonWithRowset()
     {
-        $query   = $this->_table->select();
+        $query     = $this->_table->select();
         $paginator = new Zend_Paginator(new Zend_Paginator_Adapter_DbTableSelect($query));
         $this->assertGreaterThan(2, strlen($paginator->toJson()));
     }

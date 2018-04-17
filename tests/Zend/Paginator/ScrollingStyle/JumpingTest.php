@@ -49,7 +49,7 @@ class Zend_Paginator_ScrollingStyle_JumpingTest extends PHPUnit\Framework\TestCa
     {
         parent::setUp();
         $this->_scrollingStyle = new Zend_Paginator_ScrollingStyle_Jumping();
-        $this->_paginator = Zend_Paginator::factory(range(1, 101));
+        $this->_paginator      = Zend_Paginator::factory(range(1, 101));
         $this->_paginator->setItemCountPerPage(10);
         $this->_paginator->setPageRange(10);
         $this->_expectedRange = array_combine(range(1, 10), range(1, 10));
@@ -60,7 +60,7 @@ class Zend_Paginator_ScrollingStyle_JumpingTest extends PHPUnit\Framework\TestCa
     protected function tearDown()
     {
         $this->_scrollingStyle = null;
-        $this->_paginator = null;
+        $this->_paginator      = null;
         parent::tearDown();
     }
 
@@ -88,7 +88,7 @@ class Zend_Paginator_ScrollingStyle_JumpingTest extends PHPUnit\Framework\TestCa
     public function testGetsPagesInRangeForLastPage()
     {
         $this->_paginator->setCurrentPageNumber(11);
-        $actual = $this->_scrollingStyle->getPages($this->_paginator);
+        $actual   = $this->_scrollingStyle->getPages($this->_paginator);
         $expected = array(11 => 11);
         $this->assertEquals($expected, $actual);
     }

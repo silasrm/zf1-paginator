@@ -31,5 +31,5 @@
 class TestTable extends Zend_Db_Table_Abstract
 {
     protected $_primary = 'number';
-    protected $_name = 'test';
+    protected $_name    = 'test';
 }
