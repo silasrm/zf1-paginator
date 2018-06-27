@@ -137,7 +137,7 @@ class Zend_Paginator_ScrollingStyle_ElasticTest extends PHPUnit\Framework\TestCa
         $this->_paginator->setPageRange(3);
         $this->_paginator->setCurrentPageNumber(21);
         $pages = $this->_paginator->getPages('Elastic');
-        $this->assertEquals(3, count($pages->pagesInRange));
+        $this->assertCount(3, $pages->pagesInRange);
     }
 
     public function testNoPagesOnSecondLastPageEqualsPageRangeMinOne()
@@ -145,7 +145,7 @@ class Zend_Paginator_ScrollingStyle_ElasticTest extends PHPUnit\Framework\TestCa
         $this->_paginator->setPageRange(3);
         $this->_paginator->setCurrentPageNumber(20);
         $pages = $this->_paginator->getPages('Elastic');
-        $this->assertEquals(4, count($pages->pagesInRange));
+        $this->assertCount(4, $pages->pagesInRange);
     }
 
     public function testNoPagesBeforeSecondLastPageEqualsPageRangeMinTwo()
@@ -153,6 +153,6 @@ class Zend_Paginator_ScrollingStyle_ElasticTest extends PHPUnit\Framework\TestCa
         $this->_paginator->setPageRange(3);
         $this->_paginator->setCurrentPageNumber(19);
         $pages = $this->_paginator->getPages('Elastic');
-        $this->assertEquals(5, count($pages->pagesInRange));
+        $this->assertCount(5, $pages->pagesInRange);
     }
 }

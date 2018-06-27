@@ -314,7 +314,7 @@ class Zend_PaginatorTest extends PHPUnit\Framework\TestCase
         $loader = Zend_Paginator::getAdapterLoader();
         $paths  = $loader->getPaths();
 
-        $this->assertEquals(2, count($paths));
+        $this->assertCount(2, $paths);
         $this->assertEquals(array('Zend_Paginator_Adapter_' => array('Zend/Paginator/Adapter/'),
                                   'My_Paginator_Adapter_'   => array('My/Paginator/Adapter/')), $paths);
 
@@ -875,9 +875,9 @@ class Zend_PaginatorTest extends PHPUnit\Framework\TestCase
     {
         $p = Zend_Paginator::factory(new Zend_Paginator_TestArrayAggregate());
 
-        $this->assertEquals(1, count($p));
+        $this->assertCount(1, $p);
         $this->assertTrue($p->getAdapter() instanceof Zend_Paginator_Adapter_Array);
-        $this->assertEquals(4, count($p->getAdapter()));
+        $this->assertCount(4, $p->getAdapter());
     }
 
     /**
@@ -887,9 +887,9 @@ class Zend_PaginatorTest extends PHPUnit\Framework\TestCase
     {
         $p = new Zend_Paginator(new Zend_Paginator_TestArrayAggregate());
 
-        $this->assertEquals(1, count($p));
+        $this->assertCount(1, $p);
         $this->assertTrue($p->getAdapter() instanceof Zend_Paginator_Adapter_Array);
-        $this->assertEquals(4, count($p->getAdapter()));
+        $this->assertCount(4, $p->getAdapter());
     }
 
     /**
