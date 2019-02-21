@@ -98,7 +98,7 @@ class Zend_Paginator_Adapter_DbSelectTest extends PHPUnit\Framework\TestCase
         $this->assertSame(
             md5($select->assemble()),
             $paginatorAdapter->getCacheIdentifier(),
-                          'Cache identifier incorrect!'
+            'Cache identifier incorrect!'
         );
     }
 

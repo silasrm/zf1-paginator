@@ -260,7 +260,7 @@ class Zend_Paginator implements Countable, IteratorAggregate
     public static function factory(
         $data,
         $adapter = self::INTERNAL_ADAPTER,
-                                   array $prefixPaths = null
+        array $prefixPaths = null
     ) {
         if ($data instanceof Zend_Paginator_AdapterAggregate) {
             return new self($data->getPaginatorAdapter());

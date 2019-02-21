@@ -980,7 +980,7 @@ class Zend_PaginatorTest extends PHPUnit\Framework\TestCase
         $dbAdapterOne = $this->getMockForAbstractClass(
             'Zend_Db_Adapter_Abstract',
             array(''),
-                                                       __FUNCTION__ . 'DbAdapterOne',
+            __FUNCTION__ . 'DbAdapterOne',
             false
         );
         $selectOne = new Zend_Db_Select($dbAdapterOne);
@@ -994,7 +994,7 @@ class Zend_PaginatorTest extends PHPUnit\Framework\TestCase
         $dbAdapterTwo = $this->getMockForAbstractClass(
             'Zend_Db_Adapter_Abstract',
             array(''),
-                                                       __FUNCTION__ . 'DbAdapterTwo',
+            __FUNCTION__ . 'DbAdapterTwo',
             false
         );
         $selectTwo = new Zend_Db_Select($dbAdapterTwo);
@@ -1008,7 +1008,7 @@ class Zend_PaginatorTest extends PHPUnit\Framework\TestCase
         $this->assertSame(
             $paginatorOne->getCacheInternalId(),
             $paginatorTwo->getCacheInternalId(),
-                          'DbSelect adapters with identical select statements should have the same cache internal IDs!'
+            'DbSelect adapters with identical select statements should have the same cache internal IDs!'
         );
     }
 
@@ -1020,7 +1020,7 @@ class Zend_PaginatorTest extends PHPUnit\Framework\TestCase
         $dbAdapterOne = $this->getMockForAbstractClass(
             'Zend_Db_Adapter_Abstract',
             array(''),
-                                                       __FUNCTION__ . 'DbAdapterOne',
+            __FUNCTION__ . 'DbAdapterOne',
             false
         );
         $selectOne = new Zend_Db_Select($dbAdapterOne);
@@ -1034,7 +1034,7 @@ class Zend_PaginatorTest extends PHPUnit\Framework\TestCase
         $dbAdapterTwo = $this->getMockForAbstractClass(
             'Zend_Db_Adapter_Abstract',
             array(''),
-                                                       __FUNCTION__ . 'DbAdapterTwo',
+            __FUNCTION__ . 'DbAdapterTwo',
             false
         );
         $selectTwo = new Zend_Db_Select($dbAdapterTwo);
@@ -1048,7 +1048,7 @@ class Zend_PaginatorTest extends PHPUnit\Framework\TestCase
         $this->assertSame(
             $paginatorOne->getCacheInternalId(),
             $paginatorTwo->getCacheInternalId(),
-                              'DbSelect adapters with identical select statements should have the same cache internal IDs!'
+            'DbSelect adapters with identical select statements should have the same cache internal IDs!'
         );
     }
 }

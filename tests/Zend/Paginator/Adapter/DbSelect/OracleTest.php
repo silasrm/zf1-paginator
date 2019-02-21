@@ -47,7 +47,7 @@ class Zend_Paginator_Adapter_DbSelect_OracleTest extends Zend_Paginator_Adapter_
         }
 
         $this->_db = new Zend_Db_Adapter_Oracle(
-                array('host'       => TESTS_ZEND_DB_ADAPTER_ORACLE_HOSTNAME ,
+            array('host'           => TESTS_ZEND_DB_ADAPTER_ORACLE_HOSTNAME ,
                         'username' => TESTS_ZEND_DB_ADAPTER_ORACLE_USERNAME ,
                         'password' => TESTS_ZEND_DB_ADAPTER_ORACLE_PASSWORD ,
                         'dbname'   => TESTS_ZEND_DB_ADAPTER_ORACLE_SID)
@@ -88,14 +88,14 @@ class Zend_Paginator_Adapter_DbSelect_OracleTest extends Zend_Paginator_Adapter_
     protected function _createTable()
     {
         $this->_db->query(
-                'create table "test" (
+            'create table "test" (
                                "number"      NUMBER(5),
                                "testgroup"   NUMBER(3),
                                constraint "pk_test" primary key ("number")
                            )'
         );
         $this->_db->query(
-                'create table "test_empty" (
+            'create table "test_empty" (
                                "number"      NUMBER(5),
                                "testgroup"   NUMBER(3),
                                constraint "pk_test_empty" primary key ("number")
